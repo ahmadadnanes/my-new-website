@@ -318,6 +318,10 @@ footer .social_media_ul li{
     footer .footer-container{
         flex-direction: column;
     }
+
+    footer h4{
+        text-align: center;
+    }
 }
 
 footer h4{
