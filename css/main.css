@@ -258,6 +258,7 @@ header .drop-button i{
 @media(max-width:776px){
     .portfolio .project{
         flex-direction: column;
+        margin-left: 20px;
     }
 
     .portfolio .project .text{
