@@ -250,6 +250,7 @@ header .drop-button i{
 .portfolio img{
     width: 509px;
     height: 309px;
+    border-radius: 10px;
 }
 
 .portfolio .text{
