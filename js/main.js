@@ -22,7 +22,7 @@ let up = document.getElementById("up");
 
 window.onscroll = scrollbtn;
 function scrollbtn(){
-    if(window.scrollY >= 100 && window.scrollY <= 1000 ){
+    if(window.scrollY >= 100){
         up.style.display = "block";
     }
     else{
