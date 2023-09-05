@@ -17,3 +17,22 @@ for(let i = 0 ; i < navlink.length ; i++){
     ul.style.left = "-100%";
    }
 }
+
+let up = document.getElementById("up");
+
+window.onscroll = scrollbtn;
+function scrollbtn(){
+    if(window.scrollY >= 100 && window.scrollY <= 1000 ){
+        up.style.display = "block";
+    }
+    else{
+        up.style.display = "none";
+    }
+}
+
+up.onclick = () =>{
+    window.scrollTo({
+        top:0 ,
+        behavior:"smooth"
+    })
+}
