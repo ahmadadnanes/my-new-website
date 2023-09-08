@@ -48,12 +48,25 @@ ul{
     border: none;
     display: none;
     z-index: 1000;
-    background-color: black;
+    background-color: rgb(0, 123, 255);
 }
 
 .up i{
     color:white
 }
+
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: #eee;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 123, 255);
+  }
+  /* scroll bar */
 /* end component */
 
 /*start header */
