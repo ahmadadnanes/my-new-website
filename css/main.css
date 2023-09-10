@@ -301,7 +301,7 @@ header .drop-button i{
 
 /* end portfolio */
 
-/* start conatct */
+/* start contact */
 .contact{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -319,6 +319,48 @@ header .drop-button i{
     text-align: center;
     font-size: 50px;
     margin: 15px;
+}
+
+.contact h4{
+    color: rgb(0, 123, 255);
+}
+
+.contact .form input{
+    width:300px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 123, 255);
+    color: white;
+}
+
+.contact .form input::placeholder{
+    color: white;
+}
+
+.contact .form textarea{
+    width: 300px;
+    height: 270px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 123, 255);
+    color: white;
+}
+
+.contact .form textarea::placeholder{
+    color: white;
+}
+
+.contact button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 123, 255);
+    color: white;
 }
 /* end contact */
 
