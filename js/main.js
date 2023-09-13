@@ -39,26 +39,3 @@ up.onclick = () =>{
         behavior:"smooth"
     })
 }
-
-// form validation
-let form = document.getElementById("form");
-
-let NameInput = document.querySelector("[name= 'user']")
-let EmailInput = document.querySelector("[name= 'email']")
-
-form.onsubmit = (event) => {
-    if(!(validation(NameInput,EmailInput)))
-        event.preventDefault();
-}   
-
-function validation(target1,target2){
-    if(target1 != "" && target1 != Number){
-        if(target2.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-            return true;
-        }
-    }
-    else{
-        return false
-    }
-
-}
