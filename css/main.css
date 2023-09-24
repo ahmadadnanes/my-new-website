@@ -4,6 +4,8 @@
     --section-padding:60px;
     --second-padding:15px;
     --title-margin:50px;
+    --main-color: black;
+    --second-color: #222120;
 }
 *{
     padding: 0;
@@ -37,6 +39,7 @@ ul{
     margin-bottom: var(--title-margin) ;
     text-transform: uppercase;
     color: white;
+    position: relative;
 }
 
 .up{
@@ -49,7 +52,7 @@ ul{
     border: none;
     display: none;
     z-index: 1000;
-    background-color: rgb(0, 123, 255);
+    background-color: var(--second-color);
 }
 
 .up i{
@@ -65,7 +68,7 @@ ul{
   }
   
   ::-webkit-scrollbar-thumb{
-    background-color: rgb(0, 123, 255);
+    background-color: var(--second-color);
   }
   /* scroll bar */
 /* end component */
@@ -219,7 +222,12 @@ header .drop-button i{
 .about{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: orange;
+    background-color: black;
+    position: relative;
+}
+
+.about .text{
+    position: relative;
 }
 
 .about .text p{
@@ -234,7 +242,7 @@ header .drop-button i{
 .skills{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: orangered
+    background-color: var(--second-color);
 }
 
 .skills .skills-container{
@@ -256,7 +264,7 @@ header .drop-button i{
 .portfolio{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: orange;
+    background-color: var(--main-color);
 }
 
 .portfolio .project{
@@ -317,7 +325,7 @@ header .drop-button i{
 .contact{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    background-color: orangered;
+    background-color: var(--second-color);
 }
 
 .contact .contact-container{
@@ -380,7 +388,7 @@ header .drop-button i{
 footer{
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: orange;
+    background-color: var(--main-color);
 }
 
 footer .footer-container{
