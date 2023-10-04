@@ -384,6 +384,12 @@ header .drop-button i{
     color: white;
 }
 
+@media (max-width:720px) {
+    .contact .form textarea{
+        width: 300px;
+    }
+}
+
 .contact button{
     width: 150px;
     height: 40px;
