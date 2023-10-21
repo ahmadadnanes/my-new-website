@@ -1,5 +1,56 @@
-btn = document.getElementById("drp");
-ul = document.getElementById("ul");
+let btn = document.getElementById("drp");
+let ul = document.getElementById("ul");
+let projects = document.getElementById("projects");
+
+//github api
+fetch("https://api.github.com/users/ahmadadnanes/repos")
+    .then(
+        (result) => {
+            return result.json();
+    }).then(
+        (data) =>{
+            data.slice(1).forEach(element => {
+                const project = document.createElement("div");
+                project.classList.add("project" , "reveal");
+
+                const img = document.createElement("img");
+                img.setAttribute("src" , `img/${element.name}.jpg`);
+
+                const text = document.createElement("div");
+                text.classList.add("text");
+
+                const button = document.createElement("div");
+                button.classList.add("button");
+
+                const Github = document.createElement("a");
+                Github.classList.add("btn" , "btn-primary");
+
+                Github.href = element.html_url;
+                const gText = document.createTextNode("Github");
+                Github.appendChild(gText);
+
+                button.appendChild(Github);
+
+
+                const h2 = document.createElement("h2");
+                const repoTitle = document.createTextNode(`${element.name}`);
+                h2.appendChild(repoTitle);
+
+                const p = document.createElement("p");
+                const repoDisc = document.createTextNode(`${element.description}`);
+                p.appendChild(repoDisc);
+
+                text.appendChild(h2);
+                text.appendChild(p);
+                text.appendChild(button);
+
+                project.appendChild(img);
+                project.appendChild(text);
+
+                projects.appendChild(project);
+            });
+        }
+    )
 
 // navbar button
 btn.onclick = () =>{
@@ -57,4 +108,4 @@ function reveal() {
         reveals[i].classList.remove("active");
     }
     }
-  }
+}

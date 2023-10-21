@@ -300,6 +300,10 @@ header .drop-button i{
     font-size: 40px;
 }
 
+.portfolio .project .text p{
+    width: 400px;
+}
+
 .portfolio .btn.btn-primary{
     background-color: var(--sec-color);
 }
