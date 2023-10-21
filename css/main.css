@@ -300,10 +300,6 @@ header .drop-button i{
     font-size: 40px;
 }
 
-.portfolio .project .text p{
-    width: 400px;
-}
-
 .portfolio .btn.btn-primary{
     background-color: var(--sec-color);
 }
@@ -331,6 +327,12 @@ header .drop-button i{
     .portfolio .project .text{
         text-align: center;
         order: -1;
+    }
+}
+
+@media (min-width:776px){
+    .portfolio .project .text p{
+         width: 400px;
     }
 }
 
