@@ -10,44 +10,21 @@ fetch("https://api.github.com/users/ahmadadnanes/repos")
     }).then(
         (data) =>{
             data.slice(1).forEach(element => {
-                const project = document.createElement("div");
-                project.classList.add("project" , "reveal");
+                projects.innerHTML += `
+                    <div class="project reveal">
+                        <img src='img/${element.name}.jpg'>
+                        <div class="text">
+                            <h2>${element.name}</h2>
+                            <p>${element.description}</p>
+                            <div class='button'>
+                                <a class='btn btn-primary' href=${element.html_url}>
+                                    Github
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `
 
-                const img = document.createElement("img");
-                img.setAttribute("src" , `img/${element.name}.jpg`);
-
-                const text = document.createElement("div");
-                text.classList.add("text");
-
-                const button = document.createElement("div");
-                button.classList.add("button");
-
-                const Github = document.createElement("a");
-                Github.classList.add("btn" , "btn-primary");
-
-                Github.href = element.html_url;
-                const gText = document.createTextNode("Github");
-                Github.appendChild(gText);
-
-                button.appendChild(Github);
-
-
-                const h2 = document.createElement("h2");
-                const repoTitle = document.createTextNode(`${element.name}`);
-                h2.appendChild(repoTitle);
-
-                const p = document.createElement("p");
-                const repoDisc = document.createTextNode(`${element.description}`);
-                p.appendChild(repoDisc);
-
-                text.appendChild(h2);
-                text.appendChild(p);
-                text.appendChild(button);
-
-                project.appendChild(img);
-                project.appendChild(text);
-
-                projects.appendChild(project);
             });
         }
     )
