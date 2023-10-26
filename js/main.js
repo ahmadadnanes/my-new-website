@@ -3,14 +3,11 @@ let ul = document.getElementById("ul");
 let projects = document.getElementById("projects");
 
 //github api
-fetch("https://api.github.com/users/ahmadadnanes/repos")
-    .then(
-        (result) => {
-            return result.json();
-    }).then(
-        (data) =>{
-            data.slice(1).forEach(element => {
-                projects.innerHTML += `
+async function getRepo(){
+    const response = await fetch("https://api.github.com/users/ahmadadnanes/repos");
+    const data = await response.json();
+    data.slice(1).forEach(element => {
+        projects.innerHTML += `
                     <div class="project reveal">
                         <img src='img/${element.name}.jpg'>
                         <div class="text">
@@ -24,10 +21,11 @@ fetch("https://api.github.com/users/ahmadadnanes/repos")
                         </div>
                     </div>
                 `
+    });
 
-            });
-        }
-    )
+}
+getRepo();
+
 
 // navbar button
 btn.onclick = () =>{
